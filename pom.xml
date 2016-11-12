@@ -1,18 +1,16 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>plakhotin_java_course</groupId>
-  <artifactId>java.lessons</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>JavaCourse</artifactId>
+  <packaging>pom</packaging>
   <version>1.0</version>
   
   
   <modules>
-    <module>Chapter_001</module>
+    <module>Chapter_001/1_JVM_ByteCode</module>
   </modules>
   
-  <properties>
-    <project.buildmsourceEncoding>UTF-8</project.buildmsourceEncoding>
-  </properties>
+  
 </project>
 	
 	
