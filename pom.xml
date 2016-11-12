@@ -1,10 +1,14 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>plakhotin.java_course</groupId>
+  <groupId>plakhotin_java_course</groupId>
   <artifactId>java.lessons</artifactId>
   <packaging>jar</packaging>
-  <version>2.0</version>
-  <name>junior</name>
+  <version>1.0</version>
+  
+  
+  <modules>
+    <module>Chapter_001</module>
+  </modules>
   
   <properties>
     <project.buildmsourceEncoding>UTF-8</project.buildmsourceEncoding>
