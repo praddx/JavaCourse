@@ -1,4 +1,4 @@
-package plahotin;
+package ru.plahotin;
 
 public class  Calculate {
   
