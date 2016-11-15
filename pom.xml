@@ -7,6 +7,7 @@
 	
 	<modules>
 		<module>Chapter_001/1_JVM_ByteCode</module>
+		<module>Chapter_001/2. Data Types</module>
 	</modules>
 	
 	<properties>
