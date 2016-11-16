@@ -8,6 +8,7 @@
 	<modules>
 		<module>Chapter_001/1_JVM_ByteCode</module>
 		<module>Chapter_001/2. Data Types</module>
+		<module>Chapter_001/3. Condition Operator</module>
 	</modules>
 	
 	<properties>
