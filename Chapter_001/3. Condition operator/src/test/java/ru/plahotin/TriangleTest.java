@@ -1,9 +1,9 @@
 package ru.plahotin;
 
 /**
- * Test for class Point
+ * Test for class Triangle
  * @author Alexander Plakhotin
- *@since 16.11.2016
+ *@since 17.11.2016
  */
  
  import org.junit.Test;
@@ -13,7 +13,7 @@ package ru.plahotin;
 	 private static final double PRECISION = 0.0001;
 	 
 	/** 
-	 * Test that chexks if the area of the triangle is calculated correctly
+	 * Test that checks if the area of the triangle is calculated correctly
 	 */
 	@Test
 	 public void whenAreaThenRightArea() {

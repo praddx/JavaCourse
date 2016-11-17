@@ -3,7 +3,7 @@ package ru.plahotin;
 /** Class that represents triangle with apexes in points a, b, c 
  * and that can calculate its area
  * @author Alexander Plakhotin
- * @since 16.11.2016
+ * @since 17.11.2016
  */ 
  public class Triangle {
 	 
