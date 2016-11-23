@@ -1,26 +1,35 @@
 package ru.plahotin;
 
-/** 
+/**...
  * Class that describes a point in 2d coordinates
  * @author Alexander Plakhotin
  * @since 16.11.2016
  */
- 
+
  public class Point {
+	 /**...
+	  * var x
+	  */
 	 public double x;
+	 /**...
+	  * var y
+	  */
 	 public double y;
-	
-	/**
+
+	/**...
 	 * Constructor that sets x and y coordinates of the point
-	 */ 
-	 public Point(double x, double y) {
-		 this.x = x;
-		 this.y = y;
+	 * @param px - var x
+	 * @param py - var y
+	 */
+	 public Point(double px, double py) {
+		 this.x = px;
+		 this.y = py;
 	 }
-	 
-	 /**
+
+	 /**...
 	  * Method that calculates the distance between this point and another point
 	  * @param point - another point
+	  * @return - returns result
 	  */
 	 public double distanceTo(Point point) {
 		 double deltaX = this.x - point.x;

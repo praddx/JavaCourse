@@ -5,14 +5,19 @@ package ru.plahotin;
  * @author Alexander Plakhotin
  *@since 17.11.2016
  */
- 
  import org.junit.Test;
  import static org.junit.Assert.assertEquals;
- 
+
+ /**...
+  * Test
+  */
  public class TriangleTest {
+	 /**...
+	  * precision for method assertEquals
+	  */
 	 private static final double PRECISION = 0.0001;
-	 
-	/** 
+
+	/**...
 	 * Test that checks if the area of the triangle is calculated correctly
 	 */
 	@Test
@@ -20,14 +25,14 @@ package ru.plahotin;
 		 final Point pointA = new Point(0, 0);
 		 final Point pointB = new Point(4, 0);
 		 final Point pointC = new Point(0, 4);
-		 final Triangle triangle = new Triangle(pointA, pointB, pointC); 
+		 final Triangle triangle = new Triangle(pointA, pointB, pointC);
 		 final double area = triangle.area();
-		 assertEquals(1.0/2.0*4.0*4.0, area, PRECISION);
-		 
+		 assertEquals(1.0 / 2.0 * 4.0 * 4.0, area, PRECISION);
+
 	 }
-	 
-	 /**
-	  * Test that checks if the method "area" defines correctly the possibility of constructing 
+
+	 /**...
+	  * Test that checks if the method "area" defines correctly the possibility of constructing
 	  * triangle with given points
 	  */
 	 @Test
@@ -35,9 +40,9 @@ package ru.plahotin;
 		 final Point pointA = new Point(0, 0);
 		 final Point pointB = new Point(4, 0);
 		 final Point pointC = new Point(6, 0);
-		 final Triangle triangle = new Triangle(pointA, pointB, pointC); 
+		 final Triangle triangle = new Triangle(pointA, pointB, pointC);
 		 final double area = triangle.area();
 		 assertEquals(0, area, PRECISION);
-		 
+
 	 }
  }

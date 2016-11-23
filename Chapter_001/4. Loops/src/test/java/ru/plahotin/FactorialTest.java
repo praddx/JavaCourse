@@ -5,18 +5,23 @@ package ru.plahotin;
  * @author Alexander Plakhotin
  * @since 18.11.16
  */
- 
+
  import org.junit.Test;
  import static org.junit.Assert.assertThat;
  import static org.hamcrest.core.Is.is;
- 
+
+ /**...
+  * Test
+  */
  public class FactorialTest {
-	 
+
+	 /**...
+	  * Test method
+	  */
 	 @Test
 	 public void whenFourThen24() {
 		 final Factorial facObj = new Factorial();
 		 final int answer = facObj.factorial(4);
 		 assertThat(answer, is(24));
-		 
 	 }
  }
