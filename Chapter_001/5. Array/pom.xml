@@ -1,0 +1,18 @@
+<project>
+  
+	<parent>
+		<groupId>plakhotin_java_course</groupId>
+		<artifactId>JavaCourse</artifactId>
+		<version>1.0</version>		
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ru.plahotin</groupId>
+	<artifactId>5.Arrays</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0</version>
+    
+</project>
+	
+	
+	

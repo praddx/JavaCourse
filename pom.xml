@@ -10,6 +10,7 @@
 		<module>Chapter_001/2. Data Types</module>
 		<module>Chapter_001/3. Condition Operator</module>
 		<module>Chapter_001/4. Loops/pom.xml</module>
+		<module>Chapter_001/5. Array/pom.xml</module>
 	</modules>
 	
 	<properties>
