@@ -18,7 +18,7 @@ public class Rotation {
 		 int[][] rotatedArray = new int[size][size];
 		 for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
-				rotatedArray[j][i] = array[i][j];
+				rotatedArray[size - 1 - i][j] = array[j][i];
 			}
 		}
 		return rotatedArray;

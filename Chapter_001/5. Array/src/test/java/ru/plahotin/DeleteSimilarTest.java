@@ -1,5 +1,6 @@
 package ru.plahotin;
 
+import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
 
@@ -11,6 +12,7 @@ public class DeleteSimilarTest {
 	/**...
 	 * Test method
 	 */
+	 @Test
 	 public void whenArrayThenCleared() {
 		 DeleteSimilar testObj = new DeleteSimilar();
 		 String[] strArray = {"1", "2", "4", "4", "2", "2", "3"};

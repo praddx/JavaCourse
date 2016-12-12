@@ -5,7 +5,7 @@ package ru.plahotin;
  * @author Alexander Plakhotin
  * @since 30.11.2016
  */
-
+import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
 
@@ -17,6 +17,7 @@ public class SortingTest {
 	/**...
 	 * Test of method bubleSort with array {5, 2, 10, 8, 1}
 	 */
+	 @Test
 	public void whenSortingThenRight() {
 		final int[] testArray = {5, 2, 10, 8, 1};
 		final Sorting bSort = new Sorting();

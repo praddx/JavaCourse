@@ -1,6 +1,6 @@
 package ru.plahotin;
 
-//import org.junit.Test;
+import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
 
@@ -11,6 +11,7 @@ public class RotationTest {
 	/**...
 	 * Method to test rotation class
 	 */
+	 @Test
 	 public void whenArrayThenCorrectRotation() {
 		 Rotation arrayRot = new Rotation();
 		 int[][] initArray = {{2, 4}, {5, 9}};
