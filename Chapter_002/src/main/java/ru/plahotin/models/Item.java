@@ -95,4 +95,11 @@ public class Item {
 		this.id = idForItem;
 	}
 
+	/**...
+	 * Overriding toString()
+	 */
+	 @Override
+	 public String toString() {
+		 return id + " " + name  + " " + description  + " " + createDate;
+	 }
 }
