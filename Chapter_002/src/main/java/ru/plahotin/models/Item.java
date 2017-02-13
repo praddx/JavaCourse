@@ -32,6 +32,20 @@ public class Item {
 	}
 
 	/**...
+	 * Constructor with data
+	 * @param nameOfItem - name
+	 * @param descriptionOfItem - description of the item
+	 * @param create - date of creating an item
+	 * @param id - id of the item
+	 */
+	 public Item(String nameOfItem, String descriptionOfItem, long create, String id) {
+			this.name = nameOfItem;
+			this.description = descriptionOfItem;
+			this.createDate = create;
+			this.id = id;
+	}
+
+	/**...
 	 * Method to get "name"
 	 * @return name - name
 	 */

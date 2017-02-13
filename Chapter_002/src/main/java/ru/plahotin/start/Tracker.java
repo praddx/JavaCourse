@@ -23,6 +23,19 @@ public class Tracker {
 	}
 
 	/**...
+	 * Constructor that creates initial list of items
+	 * @param initItems - initial items
+	 * @param size - size of the item array
+	 */
+	 Tracker(int size, Item[] initItems) {
+		 this.items = new Item[size];
+		 this.index = initItems.length;
+		 for (int i = 0; i < initItems.length; i++) {
+			 this.items[i] = initItems[i];
+		 }
+
+	 }
+	/**...
 	 * Method generates ID for the new item in the list
 	 * @return - returns ID
 	 */

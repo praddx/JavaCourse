@@ -15,6 +15,7 @@ public class StartUI {
 	 * input - variable that determines type of input
 	 */
 	private Input input;
+	public Tracker tracker;
 
 	/**...
 	 * Context object for strategy pattern implementation
@@ -27,22 +28,24 @@ public class StartUI {
 	 */
 	public static void main(String[] args) {
 		Input input  = new ConsoleInput();
-		new StartUI(input).init();
+		new StartUI(input, new Tracker(10)).init();
 	}
 
 	/**...
 	 * constructor that sets type of input
 	 * @param input - input method
+	 * @param tracker - tracker
 	 */
-	public StartUI(Input input) {
+	public StartUI(Input input, Tracker tracker) {
 		this.input = input;
+		this.tracker = tracker;
 	}
 
 	/**...
 	 * method that executes shows user UI and operates on the input
 	 */
 	public void init() {
-		Tracker tracker = new Tracker(10);
+		//Tracker tracker = new Tracker(10);
 		int choice = 0;
 		showWelcoming();
 		do {
