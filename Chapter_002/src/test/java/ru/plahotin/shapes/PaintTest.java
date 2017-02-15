@@ -23,5 +23,6 @@ public class PaintTest {
 		final Paint paintSquare = new Paint(new Square());
 		final String square = paintSquare.pic();
 		assertThat(correctSquare, is(square));
+
 	}
 }

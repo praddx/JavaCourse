@@ -21,7 +21,34 @@ public class StubInput implements Input {
 	 * @param question - question from menu
 	 * @return string - an answer
 	 */
+	 @Override
 	public String ask(String question) {
 		return answers[position++];
+	}
+
+	/**...
+	 * method prints a question and reads user input
+	 * return - returns user input
+	 */
+	@Override
+	public String ask(String question, String defValue) {
+		if (!answers[position].equals("")) {
+			return answers[position++];
+		} else {
+			return defValue;
+		}
+	}
+
+	/**...
+	 * method prints a question and reads user input
+	 * return - returns user input
+	 */
+	@Override
+	public long ask(String question, long defValue) {
+		if (!answers[position].equals("")) {
+			return Long.parseLong(answers[position++]);
+		} else {
+			return defValue;
+		}
 	}
 }

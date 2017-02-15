@@ -15,39 +15,20 @@ public class EditItemAction implements Action {
 	 */
 	public void executeAction(Input input, Tracker tracker) {
 		String id = input.ask("Enter id of the item to update: ");
-		String name;
-		String desc;
-		long date;
-		String choice;
 		System.out.println();
 
+		// find item to edit
 		Item itemToEdit = tracker.findById(id);
 
-		choice = input.ask("Enter new NAME or press Enter to skip: ");
-		if (!choice.equals("")) {
-			name = choice;
-		} else {
-			name = itemToEdit.getName();
-		}
+		// set new name or leave name unchanged
+		itemToEdit.setName(input.ask("Enter new NAME or press Enter to skip: ", itemToEdit.getName()));
 
-		choice = input.ask("Enter new DESCRIPTION or press Enter to skip: ");
-		if (!choice.equals("")) {
-			desc = choice;
-		} else {
-			desc = itemToEdit.getDescription();
-		}
+		// set new description or leave unchanged
+		itemToEdit.setDescription(input.ask("Enter new DESCRIPTION or press Enter to skip: ", itemToEdit.getDescription()));
 
-		choice = input.ask("Enter new DATE or press Enter to skip: ");
-		if (!choice.equals("")) {
-			date = Long.parseLong(choice);
-		} else {
-			date = itemToEdit.getCreate();
-		}
+		// set new date of creation or leave unchanged
+		itemToEdit.setCreateDate(input.ask("Enter new DATE or press Enter to skip: ", itemToEdit.getCreate()));
 
-
-		Item editedItem = new Item(name, desc, date);
-		editedItem.setId(id);
-
-		tracker.updateItem(editedItem);
 	}
+
 }

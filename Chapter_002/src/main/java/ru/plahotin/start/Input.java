@@ -10,4 +10,20 @@ public interface Input {
 	 * @return answer - returns users input as a String
 	 */
 	String ask(String question);
+
+	/**...
+	 * method that should describe the way of input
+	 * @param question - a String with question for the user
+	 * @param defValue - default value of the answer
+	 * @return answer - returns users input as a String
+	 */
+	String ask(String question, String defValue);
+
+	/**...
+	 * method that should describe the way of input
+	 * @param question - a String with question for the user
+	 * @param defValue - default value of the answer
+	 * @return answer - returns users input as a String
+	 */
+	long ask(String question, long defValue);
 }

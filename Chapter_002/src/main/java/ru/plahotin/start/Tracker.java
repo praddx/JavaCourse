@@ -57,7 +57,7 @@ public class Tracker {
 	/**...
 	 * Method that deletes an item from the list
 	 * Firstly method determines the index in list of the item that has to be deleted
-	 * The it replaces found item with the following items of the list
+	 * Then it replaces found item with the following items of the list
 	 * @param item - item to be deleted
 	 */
 	public void deleteItem(Item item) {
@@ -103,13 +103,27 @@ public class Tracker {
 	  */
 	 public Item findById(String id) {
 		 Item requiredItem = null;
-		 for (Item item : this.items) {
-			 if (id.equals(item.getId())) {
-				 requiredItem = item;
-				 break;
+		for (int i = 0; i < this.index; i++) {
+			if (id.equals(this.items[i].getId())) {
+				requiredItem = items[i];
+				break;
+			}
+		}
+		return requiredItem;
+	 }
+
+	/**...
+	 * Method that finds item in the list by Id
+	 * @param id - id of the required item
+	 * @return exists - true if id is correct, false otherwise
+	 */
+	 public boolean idCheck(String id) {
+		 for (int i = 0; i < this.index; i++) {
+			 if (id.equals(this.items[i].getId())) {
+				 return true;
 			 }
-		 }
-		 return requiredItem;
+		}
+		return false;
 	 }
 
 	/**...
