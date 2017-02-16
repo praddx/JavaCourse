@@ -144,11 +144,11 @@ public class Tracker {
 
 	 /**...
 	  * Method that updates item in the list
-	  * @param item - item that will be placed in the list instead of the old item
+	  * @param editedItem - item that will be placed in the list instead of the old item
 	  */
-	 public void updateItem(Item item) {
-		 int position = findItem(item);
-		 this.items[position] = item;
+	 public void updateItem(Item editedItem) {
+		 int position = findItem(editedItem);
+		 this.items[position] = editedItem;
 	 }
 
 }
