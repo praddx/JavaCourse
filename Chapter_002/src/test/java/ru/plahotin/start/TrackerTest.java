@@ -19,7 +19,7 @@ public class TrackerTest {
 
 	@Test
 	public void whenAddItemThenReturnItem() {
-		final Item item1  = new Item("First Item", "Item #1", 1);
+		final Item item1  = new Item("First Item", "Item #1", "1");
 		final Tracker tracker = new Tracker(2);
 		final Item result = tracker.addItem(item1);
 		assertThat(result, is(item1));
@@ -31,9 +31,9 @@ public class TrackerTest {
 	 */
 	@Test
 	public void whenFindAllThenReturnAllAddedItems() {
-		final Item item1 = new Item("First", "Item #1", 1);
-		final Item item2 = new Item("Second", "Item #2", 2);
-		final Item item3 = new Item("Third", "Item #3", 3);
+		final Item item1 = new Item("First", "Item #1", "1");
+		final Item item2 = new Item("Second", "Item #2", "2");
+		final Item item3 = new Item("Third", "Item #3", "3");
 		final Tracker tracker = new Tracker(4);
 		tracker.addItem(item1);
 		tracker.addItem(item2);
@@ -49,9 +49,9 @@ public class TrackerTest {
 	 */
 	@Test
 	public void whenDeleteItemThenReturnEditedListOfItems() {
-		final Item item1 = new Item("First", "Item #1", 1);
-		final Item item2 = new Item("Second", "Item #2", 2);
-		final Item item3 = new Item("Third", "Item #3", 3);
+		final Item item1 = new Item("First", "Item #1", "1");
+		final Item item2 = new Item("Second", "Item #2", "2");
+		final Item item3 = new Item("Third", "Item #3", "3");
 		final Tracker tracker = new Tracker(4);
 		tracker.addItem(item1);
 		tracker.addItem(item2);
@@ -68,10 +68,10 @@ public class TrackerTest {
 	 */
 	 @Test
 	 public void whenFindByNameThenReturnCorrectArray() {
-		final Item item1 = new Item("First", "Item #1", 1);
-		final Item item2 = new Item("Second", "Item #2", 2);
-		final Item item3 = new Item("Third", "Item #3", 3);
-		final Item item4 = new Item("First", "Item #4", 4);
+		final Item item1 = new Item("First", "Item #1", "1");
+		final Item item2 = new Item("Second", "Item #2", "2");
+		final Item item3 = new Item("Third", "Item #3", "3");
+		final Item item4 = new Item("First", "Item #4", "4");
 		final Tracker tracker = new Tracker(4);
 		tracker.addItem(item1);
 		tracker.addItem(item2);
@@ -88,10 +88,10 @@ public class TrackerTest {
 	  */
 	  @Test
 	  public void whenFindByIdThenReturnCorrectItem() {
-		final Item item1 = new Item("First", "Item #1", 1);
-		final Item item2 = new Item("Second", "Item #2", 2);
-		final Item item3 = new Item("Third", "Item #3", 3);
-		final Item item4 = new Item("First", "Item #4", 4);
+		final Item item1 = new Item("First", "Item #1", "1");
+		final Item item2 = new Item("Second", "Item #2", "2");
+		final Item item3 = new Item("Third", "Item #3", "3");
+		final Item item4 = new Item("First", "Item #4", "4");
 		final Tracker tracker = new Tracker(4);
 		tracker.addItem(item1);
 		tracker.addItem(item2);

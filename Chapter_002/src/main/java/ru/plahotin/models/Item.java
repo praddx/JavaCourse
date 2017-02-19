@@ -10,7 +10,7 @@ public class Item {
 
 	String description;
 
-	private long createDate;
+	private String createDate;
 
 	private String id;
 
@@ -25,7 +25,7 @@ public class Item {
 	 * @param descriptionOfItem - description of the item
 	 * @param create - date of creating an item
 	 */
-	public Item(String nameOfItem, String descriptionOfItem, long create) {
+	public Item(String nameOfItem, String descriptionOfItem, String create) {
 			this.name = nameOfItem;
 			this.description = descriptionOfItem;
 			this.createDate = create;
@@ -38,12 +38,13 @@ public class Item {
 	 * @param create - date of creating an item
 	 * @param id - id of the item
 	 */
-	 public Item(String nameOfItem, String descriptionOfItem, long create, String id) {
+	 public Item(String nameOfItem, String descriptionOfItem, String create, String id) {
 			this.name = nameOfItem;
 			this.description = descriptionOfItem;
 			this.createDate = create;
 			this.id = id;
 	}
+
 
 	/**...
 	 * Method to get "name"
@@ -81,7 +82,7 @@ public class Item {
 	 * Method to get "createDate" (date of creation)
 	 * @return createDate - date of creation
 	 */
-	public long getCreate() {
+	public String getCreate() {
 		return this.createDate;
 	}
 
@@ -89,7 +90,7 @@ public class Item {
 	 * Method to set "createDate"
 	 * @param create - date of creation
 	 */
-	public void setCreateDate(long create) {
+	public void setCreateDate(String create) {
 		this.createDate = create;
 	}
 
