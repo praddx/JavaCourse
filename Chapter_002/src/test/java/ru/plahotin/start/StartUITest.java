@@ -10,11 +10,11 @@ import ru.plahotin.models.Item;
 public class StartUITest {
 
 	/**...
-	* Method tests option 2 of the tracker program menu (adding a new task into the tracker)
-	*/
+	 * Method tests option 2 of the tracker program menu (adding task to the tracker)
+	 */
 	@Test
 	public void when1ChoiceThenCorrectResults() {
-		Input input = new StubInput(new String[] {"1", "2", "first name", "first desc", "1", "6"});
+		Input input = new StubInput(new String[] {"1", "2", "first name", "first desc", "21/02/17", "6"});
 		Tracker tracker = new Tracker(10);
 		StartUI start = new StartUI(input, tracker);
 		Item[] resultItems;
@@ -31,9 +31,9 @@ public class StartUITest {
 	 @Test
 	 public void when3ChoiceThenDeleted() {
 		Input input = new StubInput(new String[] {"1", "3", "2", "1", "6"});
-		Item item1 = new Item("first name", "first desc", "11", "1");
-		Item item2 = new Item("second name", "decond desc", "22", "2");
-		Item item3 = new Item("first name", "same name for test purose", "33", "3");
+		Item item1 = new Item("first name", "first desc", "12/02/17", "1");
+		Item item2 = new Item("second name", "decond desc", "21/02/17", "2");
+		Item item3 = new Item("first name", "same name for test purose", "12/01/17", "3");
 		Item[] initItems = {item1, item2, item3};
 		Tracker tracker = new Tracker(10, initItems);
 		StartUI start = new StartUI(input, tracker);
@@ -51,13 +51,12 @@ public class StartUITest {
 	 @Test
 	 public void when5ChoiceThen3ItemEdited() {
 		Input input = new StubInput(new String[] {"1", "5", "3", "third name", "blabla", "44", "1", "6"});
-		Item item1 = new Item("first name", "first desc", "11", "1");
-		Item item2 = new Item("second name", "decond desc", "22", "2");
-		Item item3 = new Item("first name", "same name for test purose", "33", "3");
+		Item item1 = new Item("first name", "first desc", "12/02/17", "1");
+		Item item2 = new Item("second name", "decond desc", "21/02/17", "2");
+		Item item3 = new Item("first name", "same name for test purose", "12/01/17", "3");
 		Item[] initItems = {item1, item2, item3};
 		Tracker tracker = new Tracker(10, initItems);
 		StartUI start = new StartUI(input, tracker);
-		//Item[] correctItems = {item1, item3};
 		Item[] resultItems;
 		Item resultItem;
 		start.init();
