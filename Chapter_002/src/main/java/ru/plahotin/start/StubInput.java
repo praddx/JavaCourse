@@ -28,6 +28,30 @@ public class StubInput implements Input {
 
 	/**...
 	 * method prints a question and reads user input
+	 * checks if input is correct and if so returns acquired input
+	 * @param question - prompt messege
+	 * @param range - range of possible actions
+	 * @return key - returns user input
+	 */
+	 @Override
+	public int ask(String question, int[] range) {
+		int key = Integer.valueOf(answers[position++]);
+		boolean exist = false;
+		for (int value : range) {
+			if (value == key) {
+				exist = true;
+				break;
+			}
+		}
+		if (exist) {
+			return key;
+		} else {
+			throw new MenuOutException("Please select correct choice.");
+		}
+	}
+
+	/**...
+	 * method prints a question and reads user input
 	 * return - returns user input
 	 */
 	@Override
@@ -39,16 +63,5 @@ public class StubInput implements Input {
 		}
 	}
 
-	/**...
-	 * method prints a question and reads user input
-	 * return - returns user input
-	 */
-	@Override
-	public long ask(String question, long defValue) {
-		if (!answers[position].equals("")) {
-			return Long.parseLong(answers[position++]);
-		} else {
-			return defValue;
-		}
-	}
+
 }

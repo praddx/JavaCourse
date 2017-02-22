@@ -6,6 +6,7 @@ package ru.plahotin.start;
 public class StartUI {
 	private Input input;
 	private Tracker tracker;
+	private int[] userActions = new int[] {1, 2, 3, 4, 5};
 
 	/**...
 	 * Constructor
@@ -24,16 +25,13 @@ public class StartUI {
 		//Tracker tracker = new Tracker(10);
 		MenuTracker menu = new MenuTracker(this.input, tracker);
 		menu.fillActions();
-		int key;
+		//int key;
 		do {
-			menu.show();
-			key = Integer.parseInt(input.ask("Select action or enter '6' to exit: "));
-			if (key != 6) {
+				menu.show();
 				System.out.println();
-				menu.select(key);
+				menu.select(input.ask("select:", this.userActions));
 				System.out.println();
-			}
-		} while (key != 6);
+		} while (!"y".equals(this.input.ask("Exit?:")));
 	}
 
 	/**...
@@ -41,7 +39,7 @@ public class StartUI {
 	 * @param args - standard param
 	 */
 	public static void main(String[] args) {
-		Input input = new ConsoleInput();
+		Input input = new ValidateInput();
 		new StartUI(input, new Tracker(10)).init();
 	}
 }

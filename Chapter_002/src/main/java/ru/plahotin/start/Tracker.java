@@ -47,10 +47,15 @@ public class Tracker {
 	 * Method that adds items to the list
 	 * @param item - an item that will be added to list
 	 * @return item - added item
+	 * @throws ArrayIndexOutOfBoundsException - index exception
 	 */
-	public Item addItem(Item item) {
-		item.setId(this.generateId());
-		this.items[this.index++] = item;
+	public Item addItem(Item item) throws ArrayIndexOutOfBoundsException {
+		if (this.index <= this.items.length - 1) {
+			item.setId(this.generateId());
+			this.items[this.index++] = item;
+		} else {
+			throw new ArrayIndexOutOfBoundsException();
+		}
 		return item;
 	}
 

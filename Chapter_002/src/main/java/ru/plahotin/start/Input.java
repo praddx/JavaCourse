@@ -22,8 +22,9 @@ public interface Input {
 	/**...
 	 * method that should describe the way of input
 	 * @param question - a String with question for the user
-	 * @param defValue - default value of the answer
+	 * @param range - range of correct answers
 	 * @return answer - returns users input as a String
 	 */
-	long ask(String question, long defValue);
+	int ask(String question, int[] range);
+
 }

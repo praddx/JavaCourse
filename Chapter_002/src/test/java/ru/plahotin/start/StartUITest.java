@@ -14,7 +14,7 @@ public class StartUITest {
 	 */
 	@Test
 	public void when1ChoiceThenCorrectResults() {
-		Input input = new StubInput(new String[] {"1", "2", "first name", "first desc", "21/02/17", "6"});
+		Input input = new StubInput(new String[] {"1", "", "2", "first name", "first desc", "21/02/17", "", "1", "y"});
 		Tracker tracker = new Tracker(10);
 		StartUI start = new StartUI(input, tracker);
 		Item[] resultItems;
@@ -28,9 +28,9 @@ public class StartUITest {
 	/**...
 	 * Method tests option 3 of the tracker program menu (deleting a task from the tracker)
 	 */
-	 @Test
+	@Test
 	 public void when3ChoiceThenDeleted() {
-		Input input = new StubInput(new String[] {"1", "3", "2", "1", "6"});
+		Input input = new StubInput(new String[] {"1", "", "3", "2", "", "1", "y"});
 		Item item1 = new Item("first name", "first desc", "12/02/17", "1");
 		Item item2 = new Item("second name", "decond desc", "21/02/17", "2");
 		Item item3 = new Item("first name", "same name for test purose", "12/01/17", "3");
@@ -50,7 +50,7 @@ public class StartUITest {
 	 */
 	 @Test
 	 public void when5ChoiceThen3ItemEdited() {
-		Input input = new StubInput(new String[] {"1", "5", "3", "third name", "blabla", "44", "1", "6"});
+		Input input = new StubInput(new String[] {"1", "", "5", "3", "third name", "blabla", "22/01/17", "y"});
 		Item item1 = new Item("first name", "first desc", "12/02/17", "1");
 		Item item2 = new Item("second name", "decond desc", "21/02/17", "2");
 		Item item3 = new Item("first name", "same name for test purose", "12/01/17", "3");

@@ -122,12 +122,22 @@ public class MenuTracker {
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yy");
 			System.out.println("Current date: " + zdt.format(formatter));
 			String date = input.ask("Press Enter to confirm current date OR\n"
-								+ "enter date in dd/mm/yy format:");
+								+ "enter date in dd/mm/yy format: ");
 			System.out.println();
+			while (!date.matches("[0-3]\\d\\/(0[1-9]|1[0-2])\\/\\d\\d") && !"".equals(date)) {
+				System.out.println("You entered date in the wrong format. Please, try again.");
+				date = input.ask("Press Enter to confirm current date OR\n"
+								+ "enter date in dd/mm/yy format:");
+				System.out.println();
+			}
 			if ("".equals(date)) {
 				date = zdt.format(formatter);
 			}
-			tracker.addItem(new Item(name, desc, date));
+			try {
+				tracker.addItem(new Item(name, desc, date));
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("List of items is full. Please, delete something to add new item.");
+			}
 		}
 
 		/**...
@@ -217,6 +227,9 @@ public class MenuTracker {
 		}
 	}
 
+	/**...
+	 * Class implements UserAction interface and realizes adding item logic
+	 */
 
 }
 
