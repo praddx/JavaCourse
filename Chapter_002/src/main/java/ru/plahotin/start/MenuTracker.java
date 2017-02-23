@@ -29,11 +29,11 @@ public class MenuTracker {
 	 * Method fills array of possible actions with objects of action classes
 	 */
 	public void fillActions() {
-		this.actions[0] = new MenuTracker.ShowItems();
-		this.actions[1] = new AddItem();
-		this.actions[2] = new DeleteItem();
-		this.actions[3] = new FindItemByName();
-		this.actions[4] = new EditItem();
+		this.actions[0] = new MenuTracker.ShowItems("Show all created items");
+		this.actions[1] = new AddItem("Add new item");
+		this.actions[2] = new DeleteItem("Delete item");
+		this.actions[3] = new FindItemByName("Find item by name");
+		this.actions[4] = new EditItem("Edit selected item");
 	}
 
 	/**...
@@ -58,7 +58,14 @@ public class MenuTracker {
 	/**...
 	 * Class that implements UserAction interface and realises show all items action
 	 */
-	private static class ShowItems implements UserAction {
+	private static class ShowItems extends BaseAction {
+		/**...
+		 * Constructor uses parent constructor that recieves name of action
+		 * @param name - name of action
+		 */
+		 ShowItems(String name) {
+			 super(name);
+		 }
 		/**...
 		 * Method returns actions key in menu
 		 * @return key - key of action in menu
@@ -82,21 +89,19 @@ public class MenuTracker {
 				System.out.println("List is empty\n");
 			}
 		}
-
-		/**...
-		 * Method displays info about action
-		 * @return info
-		 */
-		public String info() {
-			return String.format("%s. %s", this.key(), "Show all created items");
-		}
 	}
 
 	/**...
 	 * Class implements UserAction interface and realizes adding item logic
 	 */
-	private class AddItem implements UserAction {
-
+	private class AddItem extends BaseAction {
+		/**...
+		 * Constructor uses parent constructor that recieves name of action
+		 * @param name - name of action
+		 */
+		 AddItem(String name) {
+			 super(name);
+		 }
 		/**...
 		 * Method returns actions key in menu
 		 * @return key - key of action in menu
@@ -144,16 +149,22 @@ public class MenuTracker {
 		 * Method displays info about action
 		 * @return info
 		 */
-		public String info() {
+		/**public String info() {
 			return String.format("%s. %s", this.key(), "Add new item");
-		}
+		}*/
 	}
 
 	/**...
 	 * Class implements UserAction interface and realizes delete item logic
 	 */
-	private class DeleteItem implements UserAction {
-
+	private class DeleteItem extends BaseAction {
+		/**...
+		 * Constructor uses parent constructor that recieves name of action
+		 * @param name - name of action
+		 */
+		 DeleteItem(String name) {
+			 super(name);
+		 }
 		/**...
 		 * Method returns actions key in menu
 		 * @return key - key of action in menu
@@ -183,16 +194,22 @@ public class MenuTracker {
 		 * Method displays info about action
 		 * @return info
 		 */
-		public String info() {
+		/**public String info() {
 			return String.format("%s. %s", this.key(), "Delete item");
-		}
+		}*/
 	}
 
 	/**...
 	 * Class implements UserAction interface and realizes find item by name logic
 	 */
-	private class FindItemByName implements UserAction {
-
+	private class FindItemByName extends BaseAction {
+		/**...
+		 * Constructor uses parent constructor that recieves name of action
+		 * @param name - name of action
+		 */
+		 FindItemByName(String name) {
+			 super(name);
+		 }
 		/**...
 		 * Method returns actions key in menu
 		 * @return key - key of action in menu
@@ -222,9 +239,9 @@ public class MenuTracker {
 		 * Method displays info about action
 		 * @return info
 		 */
-		public String info() {
+		/**public String info() {
 			return String.format("%s. %s", this.key(), "Find item by name");
-		}
+		}*/
 	}
 
 	/**...
@@ -237,7 +254,14 @@ public class MenuTracker {
  * Class that implements UserAction interface
  * and used to realize "edit item" option of the tracker programm
  */
-class EditItem implements UserAction {
+class EditItem extends BaseAction {
+	/**...
+	* Constructor uses parent constructor that recieves name of action
+	* @param name - name of action
+	*/
+	EditItem(String name) {
+		 super(name);
+	}
 	/**...
 	 * Method returns an int value that represents actions's place in the menu
 	 * @return number - number of the action in the menu
@@ -270,7 +294,7 @@ class EditItem implements UserAction {
 		 * Method displays info about action
 		 * @return info
 		 */
-	public String info() {
+	/**public String info() {
 		return String.format("%s. %s", this.key(), "Edit selected item");
-	}
+	}*/
 }
