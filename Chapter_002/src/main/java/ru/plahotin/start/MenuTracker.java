@@ -282,13 +282,19 @@ class EditItem extends BaseAction {
 		Item itemToEdit = tracker.findById(id);
 
 		// set new name or leave name unchanged
-		itemToEdit.setName(input.ask("Enter new NAME or press Enter to skip: ", itemToEdit.getName()));
+		String name = input.ask("Enter new NAME or press Enter to skip: ", itemToEdit.getName());
 
 		// set new description or leave unchanged
-		itemToEdit.setDescription(input.ask("Enter new DESCRIPTION or press Enter to skip: ", itemToEdit.getDescription()));
+		String description = input.ask("Enter new DESCRIPTION or press Enter to skip: ", itemToEdit.getDescription());
 
 		// set new date of creation or leave unchanged
-		itemToEdit.setCreateDate(input.ask("Enter new DATE in dd/mm/yy format or press Enter to skip: ", itemToEdit.getCreate()));
+		String date = input.ask("Enter new DATE in dd/mm/yy format or press Enter to skip: ", itemToEdit.getCreate());
+
+		Item editedItem = new Item(name, description, date, itemToEdit.getId());
+
+		tracker.updateItem(editedItem);
+
+
 	}
 		/**...
 		 * Method displays info about action
